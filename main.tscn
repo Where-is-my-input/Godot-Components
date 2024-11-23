@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d22g72hxtsbm3"]
+[gd_scene load_steps=7 format=3 uid="uid://d22g72hxtsbm3"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_w77xg"]
 [ext_resource type="PackedScene" uid="uid://c3gvpbnxnh2g6" path="res://debug_scene_button.tscn" id="2_6xmmq"]
 [ext_resource type="PackedScene" uid="uid://juugg1lfuceg" path="res://node/in_game_timer/in_game_timer.tscn" id="3_elqjo"]
 [ext_resource type="PackedScene" uid="uid://c4t2agbwrsi2l" path="res://control/splash_screen/splash_screen.tscn" id="4_c5n6x"]
 [ext_resource type="PackedScene" uid="uid://cs87sly5qy386" path="res://control/main_menu/main_menu.tscn" id="5_c54ju"]
+[ext_resource type="PackedScene" uid="uid://p0owvgwrdtl5" path="res://control/options/options.tscn" id="6_y5q1y"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -14,13 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w77xg")
-sceneArray = Array[PackedScene]([ExtResource("2_6xmmq"), ExtResource("3_elqjo"), ExtResource("4_c5n6x"), ExtResource("5_c54ju")])
-
-[node name="Container" type="BoxContainer" parent="."]
-layout_direction = 2
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+sceneArray = Array[PackedScene]([ExtResource("2_6xmmq"), ExtResource("3_elqjo"), ExtResource("4_c5n6x"), ExtResource("5_c54ju"), ExtResource("6_y5q1y")])
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -29,3 +24,12 @@ offset_top = 287.0
 offset_right = 666.0
 offset_bottom = 310.0
 text = "Main"
+
+[node name="HFlowContainer" type="HFlowContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Container" type="BoxContainer" parent="HFlowContainer"]
+layout_direction = 2
+layout_mode = 2

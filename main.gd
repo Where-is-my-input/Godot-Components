@@ -1,7 +1,7 @@
 extends Control
 const DEBUG_SCENE_BUTTON = preload("res://debug_scene_button.tscn")
-@onready var container: Container = $Container
 @export var sceneArray:Array[PackedScene]
+@onready var container: BoxContainer = $HFlowContainer/Container
 
 func _ready() -> void:
 	for scene in sceneArray:
