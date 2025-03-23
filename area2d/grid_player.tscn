@@ -1,46 +1,39 @@
-[gd_scene load_steps=15 format=3 uid="uid://ctc37qq6tuvlx"]
+[gd_scene load_steps=14 format=3 uid="uid://ctc37qq6tuvlx"]
 
-[ext_resource type="Script" path="res://scenes/grid_player.gd" id="1_vq3ho"]
-[ext_resource type="Texture2D" uid="uid://dyla1d71g2rdx" path="res://assets/sprites.png" id="3_c4vg6"]
-[ext_resource type="PackedScene" uid="uid://bghrjftk5dsx0" path="res://scenes/virtual_controller.tscn" id="3_cv1fc"]
+[sub_resource type="Resource" id="Resource_bfxvu"]
+metadata/__load_path__ = "res://scenes/grid_player.gd"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ur7w4"]
 size = Vector2(32, 32)
 
+[sub_resource type="Resource" id="Resource_3wwxf"]
+metadata/__load_path__ = "res://scenes/virtual_controller.tscn"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_0vnho"]
-atlas = ExtResource("3_c4vg6")
 region = Rect2(0, 0, 300, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lkk05"]
-atlas = ExtResource("3_c4vg6")
 region = Rect2(300, 0, 300, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i2uvw"]
-atlas = ExtResource("3_c4vg6")
 region = Rect2(600, 0, 300, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f8suq"]
-atlas = ExtResource("3_c4vg6")
 region = Rect2(0, 300, 300, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b5pne"]
-atlas = ExtResource("3_c4vg6")
 region = Rect2(300, 300, 300, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1ll8"]
-atlas = ExtResource("3_c4vg6")
 region = Rect2(600, 300, 300, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7pgj"]
-atlas = ExtResource("3_c4vg6")
 region = Rect2(0, 600, 300, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1jd7u"]
-atlas = ExtResource("3_c4vg6")
 region = Rect2(300, 600, 300, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lq12i"]
-atlas = ExtResource("3_c4vg6")
 region = Rect2(600, 600, 300, 300)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t0ab3"]
@@ -112,12 +105,12 @@ animations = [{
 z_index = 5
 collision_layer = 65536
 collision_mask = 65536
-script = ExtResource("1_vq3ho")
+script = SubResource("Resource_bfxvu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ur7w4")
 
-[node name="virtual_controller" parent="." instance=ExtResource("3_cv1fc")]
+[node name="virtual_controller" parent="."]
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 collision_mask = 65536

@@ -1,13 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3xgbexhgrg4d"]
+[gd_scene load_steps=3 format=3 uid="uid://c3xgbexhgrg4d"]
 
-[ext_resource type="Script" path="res://scenes/stage_select.gd" id="1_ge0gv"]
-[ext_resource type="PackedScene" uid="uid://c3vppneclkmx2" path="res://scenes/stages/stage_1.tscn" id="2_5mpx5"]
-[ext_resource type="PackedScene" uid="uid://cv6qbw65oyxd1" path="res://scenes/stages/stage_2.tscn" id="3_rra3x"]
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="3_v1krn"]
-[ext_resource type="PackedScene" uid="uid://bn6gxrdphfg35" path="res://scenes/stages/stage_3.tscn" id="4_sbnjt"]
-[ext_resource type="PackedScene" uid="uid://dg8bjyoey4lnu" path="res://scenes/stages/stage_4.tscn" id="5_jkiim"]
-[ext_resource type="PackedScene" uid="uid://drfstqfkwycp3" path="res://scenes/stages/stage_5.tscn" id="6_agegu"]
-[ext_resource type="PackedScene" uid="uid://dx0b8y3gnlohi" path="res://scenes/stages/stage_6.tscn" id="7_cj1p1"]
+[sub_resource type="Resource" id="Resource_uh6i5"]
+metadata/__load_path__ = "res://scenes/stage_select.gd"
+
+[sub_resource type="Resource" id="Resource_ws6nt"]
+metadata/__load_path__ = "res://scenes/main_menu.gd"
 
 [node name="stage_select" type="Control"]
 layout_mode = 3
@@ -16,8 +13,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ge0gv")
-stages = Array[PackedScene]([ExtResource("2_5mpx5"), ExtResource("3_rra3x"), ExtResource("4_sbnjt"), ExtResource("5_jkiim"), ExtResource("6_agegu"), ExtResource("7_cj1p1")])
+script = SubResource("Resource_uh6i5")
+stages = Array[PackedScene]([])
 
 [node name="FlowContainer" type="FlowContainer" parent="."]
 layout_mode = 1
@@ -58,6 +55,6 @@ offset_top = -31.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Main Menu"
-script = ExtResource("3_v1krn")
+script = SubResource("Resource_ws6nt")
 
 [connection signal="pressed" from="main_menu" to="main_menu" method="_on_pressed"]

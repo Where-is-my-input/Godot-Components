@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://rc3aggfpupcw"]
+
+[sub_resource type="Resource" id="Resource_pnrxx"]
+metadata/__load_path__ = "res://scenes/virtual_controller/virtual_controller.gd"
+
+[node name="virtualController" type="Node"]
+process_priority = -1
+script = SubResource("Resource_pnrxx")
+
+[node name="tmrJump" type="Timer" parent="."]
+one_shot = true
+
+[node name="tmrJumpRelease" type="Timer" parent="."]
+one_shot = true
+
+[node name="tmrAttack" type="Timer" parent="."]
+one_shot = true
+
+[node name="tmrDash" type="Timer" parent="."]
+one_shot = true
+
+[node name="tmrDashRelease" type="Timer" parent="."]
+one_shot = true

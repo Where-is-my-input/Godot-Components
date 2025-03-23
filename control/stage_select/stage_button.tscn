@@ -1,11 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://bbka8nvb31rgl"]
 
-[ext_resource type="Script" path="res://scenes/stage_button.gd" id="1_lttd1"]
+[sub_resource type="Resource" id="Resource_me82h"]
+metadata/__load_path__ = "res://scenes/stage_button.gd"
 
 [node name="stage_button" type="Button"]
 custom_minimum_size = Vector2(64, 64)
 offset_right = 8.0
 offset_bottom = 8.0
-script = ExtResource("1_lttd1")
+script = SubResource("Resource_me82h")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
